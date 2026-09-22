@@ -4,22 +4,21 @@
 
 ### ✨ The little backend that makes Bloom bloom ✨
 
-<img src="https://img.shields.io/badge/Django-Backend-59633B?style=for-the-badge&logo=django&logoColor=white" alt="Django" />
-<img src="https://img.shields.io/badge/Django_REST_Framework-API-E9A0A8?style=for-the-badge&logo=django&logoColor=white" alt="DRF" />
-<img src="https://img.shields.io/badge/Google_Gemini-AI-FFF4E8?style=for-the-badge&logo=google&logoColor=59633B" alt="Google Gemini" />
-<img src="https://img.shields.io/badge/SQLite-Database-59633B?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
+<p>
+  <img src="https://img.shields.io/badge/Django-Backend-59633B?style=for-the-badge&logo=django&logoColor=white" alt="Django">
+  <img src="https://img.shields.io/badge/DRF-REST_API-E9A0A8?style=for-the-badge&logo=django&logoColor=white" alt="Django REST Framework">
+  <img src="https://img.shields.io/badge/Gemini-AI-FFF4E8?style=for-the-badge&logo=google&logoColor=59633B" alt="Google Gemini">
+</p>
 
-<br />
-
-<img src="https://img.shields.io/badge/JWT-Authentication-E9A0A8?style=flat-square" alt="JWT" />
-<img src="https://img.shields.io/badge/Python-3.x-59633B?style=flat-square&logo=python&logoColor=white" alt="Python" />
-<img src="https://img.shields.io/badge/Status-In_Development-E9A0A8?style=flat-square" alt="Status" />
-
-<br /><br />
+<p>
+  <img src="https://img.shields.io/badge/Python-3.x-59633B?style=flat-square&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/JWT-Authentication-E9A0A8?style=flat-square" alt="JWT">
+  <img src="https://img.shields.io/badge/SQLite-Database-59633B?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite">
+</p>
 
 🌸 🧸 🌿 🛍️ ✨ 🌷
 
-### Products • Authentication • Cart • AI
+**Products · Authentication · Cart · AI**
 
 </div>
 
@@ -29,167 +28,213 @@
 
 **Bloom AI Backend** is the Django REST API powering the Bloom AI e-commerce application.
 
-It provides the backend services required by the React frontend, including:
+It provides the backend services used by the React frontend for:
 
-- 🛍️ Product management
-- 👤 User authentication
-- 🔐 JWT authentication
-- 🛒 Cart management
-- 🤖 Gemini-powered AI chatbot
-- 📦 Product stock information
-- 🔌 REST API endpoints
+* 🛍️ Product management
+* 👤 User registration and authentication
+* 🔐 JWT-based authorization
+* 🛒 Shopping cart management
+* 📦 Product stock information
+* 🤖 Gemini-powered AI chatbot
+* 🔌 REST API communication
 
-The backend is designed to work together with the **Bloom AI React frontend**.
-
-> 🌿 *The frontend is where Bloom looks beautiful.  
-> The backend is where everything works behind the scenes.*
+> 🌿 **The frontend is where Bloom looks beautiful.
+> The backend is where everything works behind the scenes.**
 
 ---
 
-## 💕 Frontend Repository
+## 🌸 Bloom AI Project
 
-Looking for the React frontend?
+Bloom AI is organized into two repositories:
 
-### 🌸 Bloom AI — Frontend
+| 🌷 Part     | Repository                                                         |
+| ----------- | ------------------------------------------------------------------ |
+| 🎨 Frontend | [Bloom AI Frontend](https://github.com/Neahans/bloom-ai-ecommerce) |
+| 🐍 Backend  | **Bloom AI Backend**                                               |
 
-<a href="https://github.com/Neahans/bloom-ai-ecommerce">
-  <img src="https://img.shields.io/badge/🌸_View_Frontend_Repository-59633B?style=for-the-badge" alt="Frontend Repository" />
-</a>
+### 🎨 Frontend Repository
 
-🔗 **Frontend Repository:**  
-https://github.com/Neahans/bloom-ai-ecommerce
+[![Open Frontend](https://img.shields.io/badge/🌸_Open_Bloom_AI_Frontend-59633B?style=for-the-badge)](https://github.com/Neahans/bloom-ai-ecommerce)
+
+The React frontend provides the user interface for browsing products, viewing product details, interacting with the cart, and chatting with Bloom AI.
 
 ---
 
-## 🪴 Full Project
+## 🪴 Architecture
 
 ```text
-🌿 Bloom AI
-│
-├── 🎨 React Frontend
-│   └── bloom-ai-ecommerce
-│
-└── 🐍 Django Backend
-    └── bloom-ai-ecommerce-backend
-🔗 Connect Both Repositories
-🌸 Part	Repository
-🎨 Frontend	Bloom AI Frontend
-🐍 Backend	Bloom AI Backend
-🎀 Features
-🛍️ Product API
+                    🌸 BLOOM AI
+                         │
+                         ▼
+                ┌─────────────────┐
+                │   React.js UI   │
+                │                 │
+                │  Home           │
+                │  Shop           │
+                │  Products       │
+                │  Cart           │
+                │  Bloom AI       │
+                └────────┬────────┘
+                         │
+                         │ REST API
+                         ▼
+                ┌─────────────────┐
+                │ Django Backend  │
+                │                 │
+                │ Products        │
+                │ Authentication  │
+                │ Cart            │
+                │ Chatbot         │
+                └────────┬────────┘
+                         │
+                    ┌────┴────┐
+                    ▼         ▼
+                🗄️ SQLite   🤖 Gemini
+```
 
-The backend provides product APIs for the React application.
+---
 
-GET /api/products/
-GET /api/products/<id>/
-POST /api/products/
-PUT /api/products/<id>/
-DELETE /api/products/<id>/
+## 🎀 Features
 
-Product information includes:
+### 🛍️ Product Management
 
-Product name
-Description
-Price
-Category
-Image
-Stock
-Creation date
-👤 Authentication
+The product API supports creating, viewing, updating, and deleting products.
 
-Bloom uses JWT-based authentication.
+```text
+GET     /api/products/
+GET     /api/products/<id>/
+POST    /api/products/
+PUT     /api/products/<id>/
+DELETE  /api/products/<id>/
+```
 
-Features include:
+Each product contains information such as:
 
-🌸 User registration
-🔐 Login
-🔑 Access tokens
-♻️ Refresh tokens
-🛡️ Protected API requests
+* Product name
+* Description
+* Price
+* Category
+* Image
+* Stock
+* Creation date
+
+---
+
+### 👤 Authentication
+
+Bloom uses **JWT authentication** for protected API requests.
+
+Supported features:
+
+* 🌸 User registration
+* 🔑 Login
+* ♻️ Access token refresh
+* 🛡️ Protected endpoints
+* 👤 User-specific cart data
 
 Authentication endpoints:
 
+```text
 POST /api/auth/register/
 POST /api/auth/login/
 POST /api/auth/refresh/
-🛒 Cart API
+```
 
-Users can manage their own shopping cart.
+---
 
-GET  /api/cart/
-POST /api/cart/
-PUT  /api/cart/<id>/
-DELETE /api/cart/<id>/
+### 🛒 Shopping Cart
 
-Each cart item contains:
+Authenticated users can manage their own cart.
 
-🛍️ Product
-🔢 Quantity
-💰 Product price
-👤 User
+```text
+GET     /api/cart/
+POST    /api/cart/
+PUT     /api/cart/<id>/
+DELETE  /api/cart/<id>/
+```
 
-Cart data is protected using authentication.
+Cart items contain:
 
-🤖 Bloom AI
+* 🛍️ Product
+* 🔢 Quantity
+* 💰 Product price
+* 👤 User
 
-Bloom includes an AI-powered shopping assistant using Google Gemini.
+---
 
-The React chatbot sends the user's message to the Django API:
+## 🤖 Bloom AI
 
-React Chatbot
-      │
-      │ POST /api/chat/
-      ▼
-Django REST API
-      │
-      ▼
-Google Gemini
-      │
-      ▼
-AI Response
-      │
-      ▼
-React Chatbot
+Bloom includes an AI-powered shopping assistant using **Google Gemini**.
 
-Example:
+The chatbot communicates with the backend through a dedicated API endpoint.
 
-User:
-"I need something under ₹1500."
+```text
+👩 User
+   │
+   │ "I need something under ₹1500."
+   ▼
+🌸 React Chatbot
+   │
+   │ POST /api/chat/
+   ▼
+🐍 Django REST API
+   │
+   ▼
+🤖 Google Gemini
+   │
+   ▼
+💬 AI Response
+   │
+   ▼
+🌸 React Chatbot
+```
 
-        ↓
+### 💬 Chat Endpoint
 
-Bloom AI:
-"Sure! You could try the Blush Tote Bag..."
-💬 Chat Endpoint
+```text
 POST /api/chat/
+```
 
-Request:
+Example request:
 
+```json
 {
   "message": "I need something under ₹1500."
 }
+```
 
-Response:
+Example response:
 
+```json
 {
   "reply": "..."
 }
-🧸 Tech Stack
-🌷 Technology	🛠️ Purpose
-🐍 Python	Backend language
-🌿 Django	Web framework
-🔌 Django REST Framework	REST APIs
-🤖 Google Gemini	AI chatbot
-🔐 Simple JWT	Authentication
-🗄️ SQLite	Database
-🌱 python-dotenv	Environment variables
-🌸 django-cors-headers	Frontend API communication
-🌱 Project Structure
+```
+
+---
+
+## 🧸 Tech Stack
+
+| 🌷 Technology            | 🛠️ Purpose            |
+| ------------------------ | ---------------------- |
+| 🐍 Python                | Backend language       |
+| 🌿 Django                | Web framework          |
+| 🔌 Django REST Framework | REST APIs              |
+| 🤖 Google Gemini         | AI chatbot             |
+| 🔐 Simple JWT            | Authentication         |
+| 🗄️ SQLite               | Database               |
+| 🌱 python-dotenv         | Environment variables  |
+| 🌸 django-cors-headers   | Frontend communication |
+
+---
+
+## 🌱 Project Structure
+
+```text
 bloom-ai-ecommerce-backend/
 │
 ├── chatbot/
 │   ├── migrations/
-│   ├── __init__.py
 │   ├── admin.py
 │   ├── apps.py
 │   ├── models.py
@@ -197,7 +242,6 @@ bloom-ai-ecommerce-backend/
 │   └── views.py
 │
 ├── ecommerce_backend/
-│   ├── __init__.py
 │   ├── settings.py
 │   ├── urls.py
 │   ├── asgi.py
@@ -205,7 +249,6 @@ bloom-ai-ecommerce-backend/
 │
 ├── products/
 │   ├── migrations/
-│   ├── __init__.py
 │   ├── admin.py
 │   ├── apps.py
 │   ├── models.py
@@ -215,169 +258,233 @@ bloom-ai-ecommerce-backend/
 │
 ├── users/
 │   ├── migrations/
-│   ├── __init__.py
 │   ├── admin.py
 │   ├── apps.py
 │   ├── urls.py
 │   └── views.py
 │
 ├── manage.py
-├── .gitignore
 ├── requirements.txt
+├── .gitignore
 └── README.md
-🚀 Getting Started
-1️⃣ Clone the backend
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repository
+
+```bash
 git clone https://github.com/Neahans/bloom-ai-ecommerce-backend.git
 cd bloom-ai-ecommerce-backend
-2️⃣ Create a virtual environment
+```
 
-Windows:
+### 2️⃣ Create a virtual environment
 
+On Windows:
+
+```powershell
 python -m venv venv
+```
 
 Activate it:
 
+```powershell
 venv\Scripts\activate
-3️⃣ Install dependencies
+```
+
+### 3️⃣ Install dependencies
+
+```powershell
 pip install -r requirements.txt
-4️⃣ Configure environment variables
+```
 
-Create a .env file in the backend root:
+### 4️⃣ Configure environment variables
 
+Create a `.env` file in the backend root:
+
+```env
 GEMINI_API_KEY=your_api_key_here
+```
 
-🔒 Never commit .env to GitHub.
+> 🔒 **Never commit your `.env` file or expose your Gemini API key.**
 
-The .env file is already excluded through .gitignore.
+### 5️⃣ Run migrations
 
-5️⃣ Run migrations
+```powershell
 python manage.py migrate
-6️⃣ Start the Django server
+```
+
+### 6️⃣ Start the development server
+
+```powershell
 python manage.py runserver
+```
 
-The backend will run at:
+The API will be available at:
 
+```text
 http://127.0.0.1:8000/
-🌸 Connect With the React Frontend
+```
 
-Start the React frontend separately:
+---
 
+## 🌸 Connect the React Frontend
+
+Clone the frontend repository separately:
+
+```bash
+git clone https://github.com/Neahans/bloom-ai-ecommerce.git
+```
+
+Start the frontend:
+
+```powershell
+npm install
 npm start
+```
 
-The frontend runs at:
+The React application runs at:
 
+```text
 http://localhost:3000/
+```
 
-The React application communicates with the Django backend through REST API endpoints.
+The frontend communicates with the Django API running at:
 
-┌──────────────────────┐
-│   🌸 React Frontend  │
-│   localhost:3000     │
-└──────────┬───────────┘
-           │
-           │ REST API
-           ▼
-┌──────────────────────┐
-│   🐍 Django Backend  │
-│   127.0.0.1:8000     │
-└──────────┬───────────┘
-           │
-      ┌────┴─────┐
-      ▼          ▼
- 🗄️ SQLite    🤖 Gemini
-🔐 API Authentication
+```text
+http://127.0.0.1:8000/
+```
 
-For protected endpoints, send the JWT access token in the request header:
+### 🔗 Repositories
 
-Authorization: Bearer <access_token>
+**🎨 Frontend**
+
+https://github.com/Neahans/bloom-ai-ecommerce
+
+**🐍 Backend**
+
+https://github.com/Neahans/bloom-ai-ecommerce-backend
+
+---
+
+## 🔐 Authentication
+
+Protected API requests use a JWT access token.
 
 Example:
 
+```javascript
 fetch("http://127.0.0.1:8000/api/cart/", {
   headers: {
     Authorization: `Bearer ${token}`
   }
 });
-🌿 CORS Configuration
+```
 
-The backend allows requests from the React development server:
+---
 
+## 🌸 CORS
+
+During development, the backend allows requests from:
+
+```text
 http://localhost:3000
 http://127.0.0.1:3000
+```
 
-This allows the React frontend to communicate with the Django REST API during development.
+This allows the React frontend to communicate with the Django REST API.
 
-🧁 API Overview
-🌷 Endpoint	🔧 Method	✨ Purpose
-/api/products/	GET	List products
-/api/products/<id>/	GET	Product details
-/api/auth/register/	POST	Register user
-/api/auth/login/	POST	Login
-/api/auth/refresh/	POST	Refresh JWT
-/api/cart/	GET	View cart
-/api/cart/	POST	Add to cart
-/api/chat/	POST	Chat with Bloom AI
-🛡️ Environment & Security
+---
 
-Sensitive configuration should never be committed to GitHub.
+## 🧁 API Overview
 
-The following files are ignored:
+| Endpoint              | Method | Purpose            |
+| --------------------- | :----: | ------------------ |
+| `/api/products/`      |   GET  | List products      |
+| `/api/products/<id>/` |   GET  | Product details    |
+| `/api/products/`      |  POST  | Create product     |
+| `/api/products/<id>/` |   PUT  | Update product     |
+| `/api/products/<id>/` | DELETE | Delete product     |
+| `/api/auth/register/` |  POST  | Register user      |
+| `/api/auth/login/`    |  POST  | Login              |
+| `/api/auth/refresh/`  |  POST  | Refresh JWT        |
+| `/api/cart/`          |   GET  | View cart          |
+| `/api/cart/`          |  POST  | Add item to cart   |
+| `/api/cart/<id>/`     |   PUT  | Update cart item   |
+| `/api/cart/<id>/`     | DELETE | Remove cart item   |
+| `/api/chat/`          |  POST  | Chat with Bloom AI |
 
+---
+
+## 🛡️ Security
+
+Sensitive files are excluded from version control.
+
+The project ignores:
+
+```text
 .env
 .env.*
 venv/
 db.sqlite3
 __pycache__/
 *.pyc
-🔒 Never expose:
+```
+
+### 🔒 Never expose
+
+```text
 GEMINI_API_KEY
+```
 
-in source code, screenshots, README files, or Git commits.
+Do not place API keys in:
 
-🧸 Future Improvements
+* ❌ Source code
+* ❌ Git commits
+* ❌ README files
+* ❌ Screenshots
+* ❌ Public repositories
 
-Bloom is still growing 🌱
+---
 
-Planned backend improvements:
+## 🌱 Future Improvements
 
-🛒 Complete checkout API
-📦 Order management
-🧾 Order history
-💳 Payment integration
-❤️ Wishlist API
-🔎 Product search
-🧠 AI product recommendations
-👤 User profile API
-📊 Admin analytics
-🏷️ Product reviews
-📈 Inventory management
-🌸 Related Repository
-<div align="center">
-🎨 Bloom AI Frontend
-<a href="https://github.com/Neahans/bloom-ai-ecommerce"> <img src="https://img.shields.io/badge/🌸_Open_Bloom_AI_Frontend-59633B?style=for-the-badge" alt="Open Frontend Repository" /> </a>
+Bloom is still growing ✨
 
-<br /><br />
+Planned backend improvements include:
 
-🐍 Bloom AI Backend
+* 🛒 Complete checkout API
+* 📦 Order management
+* 🧾 Order history
+* 💳 Payment integration
+* ❤️ Wishlist API
+* 🔎 Product search
+* 🧠 Personalized AI recommendations
+* 👤 User profile API
+* 📊 Admin analytics
+* 🏷️ Product reviews
+* 📈 Inventory management
 
-You're here! ✨
+---
 
-</div>
-💌 Made With Love
+## 💌 Made With Love
+
 <div align="center">
 
 🌿 🧸 🌸 🛍️ ✨ 🌷
 
-Bloom AI
+### Bloom AI
 
-React ✦ Django ✦ Gemini AI
+**React** ✦ **Django** ✦ **Gemini AI**
 
-<br />
+<br>
 
-✨ Keep growing. Keep creating. Keep blooming. ✨
+✨ *Keep growing. Keep creating. Keep blooming.* ✨
 
-<br />
+<br>
 
-Made by Neaha N S
+Made by **[Neaha N S](https://github.com/Neahans)**
 
-</div> ```
+</div>
